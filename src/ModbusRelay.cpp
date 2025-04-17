@@ -64,3 +64,59 @@ _serial1->flush();
 
 
 }
+
+
+
+void ModbusRelay :: turnOn(uint8_t relayNum) {
+
+uint16_t address = relayNum - 1 ;
+
+sendCommand(address , RELAY_ON);
+
+
+}
+
+
+
+
+void ModbusRelay :: turnOff(uint8_t relayNum){
+
+
+uint16_t address = relayNum - 1 ;
+
+sendCommand(address , RELAY_OFF);
+
+
+}
+
+
+void ModbusRelay :: toggle(uint8_t relayNum){
+
+uint16_t address = relayNum - 1 ;
+
+sendCommand(address ,  RELAY_TOGGLE);
+
+}
+
+
+void ModbusRelay :: allOn(){
+
+    sendCommand(ALL_RELAYS_ADDR, RELAY_ON);
+}
+ 
+
+void ModbusRelay :: allOff(){
+
+    sendCommand(ALL_RELAYS_ADDR, RELAY_OFF);
+
+}
+
+
+
+void ModbusRelay :: allToggle(){
+
+    sendCommand(ALL_RELAYS_ADDR, RELAY_TOGGLE);
+}
+
+
+
