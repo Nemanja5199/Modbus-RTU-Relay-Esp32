@@ -16,7 +16,7 @@ void setup() {
   relay.begin(); 
 
   //Set the new address for you relay module 
-  relay.setAddress(2)
+  relay.setAddress(2);
   Serial.println("Setup complete");
 }
 
