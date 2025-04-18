@@ -1,0 +1,10 @@
+name=ModbusRelay
+version=1.0.0
+author=Nemanja
+maintainer=Nemanja <bogojevicn5199@gmail.com>
+sentence=Library for controlling Modbus RTU relays with ESP32.
+paragraph=Simplifies controlling Modbus RTU relay boards over RS485 with ESP32. Supports turning relays on/off, toggling, controlling all relays.
+category=Device Control
+url=https://github.com/Nemanja5199/Modbus-RTU-Relay-Esp32
+architectures=esp32
+includes=ModbusRelay.h
