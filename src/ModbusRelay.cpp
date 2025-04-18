@@ -53,24 +53,9 @@ void ModbusRelay :: setAddressCommand(uint16_t value){
     frame[7] = highByte(crc);
 
 
-
-    for (int i = 0; i < 8; i++) {
-        Serial.print("0x");
-        Serial.print(frame[i], HEX);
-        Serial.print(" ");
-    }
-    Serial.println();
-
-
     _serial1->write(frame,8);
     _serial1->flush();
 
-
-    while (_serial1->available()) {
-        uint8_t b = _serial1->read();
-        Serial.print("Response byte: 0x");
-        Serial.println(b, HEX);
-    }
 
 }
 
